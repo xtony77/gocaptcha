@@ -18,6 +18,7 @@ func SetupRouter(config *config.Config) *gin.Engine {
 	{
 		api.GET("/captcha", captcha.GetCaptcha)
 		api.POST("/captcha", captcha.VerifityCaptcha)
+		api.PATCH("/captcha", captcha.ReloadCaptcha)
 	}
 
 	return r
