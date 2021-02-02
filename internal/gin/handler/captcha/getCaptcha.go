@@ -14,8 +14,8 @@ import (
 
 type GetCaptchaResponse struct {
 	Image  string `json:"image"`
-	ID     string `json:id`
-	Digits string `json:digits`
+	ID     string `json:"id"`
+	Digits string `json:"digits"`
 }
 
 func GetCaptcha(c *gin.Context) {

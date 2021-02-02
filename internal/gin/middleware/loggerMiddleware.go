@@ -9,6 +9,6 @@ import (
 func InitLogger(c *gin.Context) {
 	logger := logger.NewLogger()
 	zap.ReplaceGlobals(logger)
-	defer logger.Sync() // flushes buffer, if any
+	defer logger.Sync()
 	c.Next()
 }
